@@ -39,11 +39,6 @@ textarea:nth-child(2){
     height: 2.5em;
 }
 
-label{
-    grid-column-start: 1;
-    grid-column-end: 5;
-    justify-self: end;
-}
 input[type=button]{
     border-radius: 0.5em;
     height: 3em;
