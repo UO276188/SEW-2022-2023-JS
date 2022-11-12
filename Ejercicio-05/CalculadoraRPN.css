@@ -1,0 +1,71 @@
+body {
+	background-color: #000;
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: azure;
+    text-align: center;
+}
+form{
+    padding: 1em;
+    border-radius: 1em;
+    background-color: darkgray;
+	margin: 0 auto;
+	
+    display: grid;
+	grid-gap: 10px;
+	
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 20em;
+}
+textarea{
+    resize: none;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+textarea:nth-child(1){
+    height: 10em;
+}
+
+textarea:nth-child(2){
+    height: 2.5em;
+}
+
+label{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: end;
+}
+input[type=button]{
+    border-radius: 0.5em;
+    height: 3em;
+}
+
+input[type=button][value="ENTER"]{
+    background-color: #5CF079;
+}
+
+
+
+input[type=button][value="x"],
+input[type=button][value="/"],
+input[type=button][value="-"],
+input[type=button][value="+"]{
+	background-color: #FFB6AF;
+}
+
+
+input[type=button][value="C"],
+input[type=button][value="CE"]{
+	background-color: #81C1CF;
+}
+
+input[type=button][value="sin"],
+input[type=button][value="asin"],
+input[type=button][value="cos"],
+input[type=button][value="acos"],
+input[type=button][value="tan"],
+input[type=button][value="atan"]{
+	background-color: #D291BC;
+}
