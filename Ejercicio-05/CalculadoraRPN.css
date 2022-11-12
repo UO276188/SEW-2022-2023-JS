@@ -23,7 +23,7 @@ label{
     grid-column-start: 1;
     grid-column-end: 5;
     font-size: 0.75em;
-    text-justify: end;
+    justify-self: end;
 }
 
 textarea{
