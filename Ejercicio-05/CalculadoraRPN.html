@@ -14,10 +14,13 @@
 
     <h1>Calculadora RPN</h1>
     <form>
-        <textarea disabled title="pantalla"></textarea>
-        <textarea disabled title="prePantalla"></textarea>
+        
+        <textarea id="p1" disabled title="pantalla"></textarea>
+        
+        <textarea id="p2" disabled title="prePantalla"></textarea>
        <!--(+,-,*,/), (sin, cos, tan, arcoSeno, ArcoCoseno y ArcoTangente)-->
-      
+        <label for="p1">HP</label>
+        <label for="p2">Reverse Polish Notation</label>
 
         <input type="button" value="sin" onclick="calculadora.sin()">
         <input type="button" value="cos" onclick="calculadora.cos()"> 

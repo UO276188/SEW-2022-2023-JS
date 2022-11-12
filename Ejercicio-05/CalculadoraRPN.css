@@ -18,6 +18,13 @@ form{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 20em;
 }
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 0.75em;
+}
+
 textarea{
     resize: none;
     grid-column-start: 1;
