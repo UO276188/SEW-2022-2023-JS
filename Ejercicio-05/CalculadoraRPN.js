@@ -76,6 +76,25 @@ class CalculadoraRPN{
                 calculadora.CE();
             }
 
+            if (event.code === 'KeyS') {    //S = seno
+                calculadora.sin();
+            }
+            if (event.code === 'KeyC') {    //C = coseno
+                calculadora.cos();
+            }
+            if (event.code === 'KeyT') {    //T = tangente 
+                calculadora.tan();
+            }
+            if (event.code === 'KeyD') {    //D = arcoseno
+                calculadora.arcoSeno();
+            }
+            if (event.code === 'KeyF') {    //C = arcocoseno
+                calculadora.arcoCoseno();
+            }
+            if (event.code === 'KeyG') {    //G = arcotangente 
+                calculadora.arcoTangente();
+            }
+
         });    
     }
 
@@ -141,7 +160,7 @@ class CalculadoraRPN{
         if (this.pila.size() >= 1){
             var op = this.pila.desapilar();
             var res = Math.sin(op);
-            this.pila.apilar(result);
+            this.pila.apilar(res);
 
             this.mostrarPantalla();
         }
@@ -151,7 +170,7 @@ class CalculadoraRPN{
         if (this.pila.size() >= 1){
             var op = this.pila.desapilar();
             var res = Math.cos(op);
-            this.pila.apilar(result);
+            this.pila.apilar(res);
 
             this.mostrarPantalla();
         }
@@ -161,7 +180,7 @@ class CalculadoraRPN{
         if (this.pila.size() >= 1){
             var op = this.pila.desapilar();
             var res = Math.tan(op);
-            this.pila.apilar(result);
+            this.pila.apilar(res);
 
             this.mostrarPantalla();
         }
@@ -171,7 +190,7 @@ class CalculadoraRPN{
         if (this.pila.size() >= 1){
             var op = this.pila.desapilar();
             var res = Math.asin(op);
-            this.pila.apilar(result);
+            this.pila.apilar(res);
 
             this.mostrarPantalla();
         }
@@ -181,7 +200,7 @@ class CalculadoraRPN{
         if (this.pila.size() >= 1){
             var op = this.pila.desapilar();
             var res = Math.acos(op);
-            this.pila.apilar(result);
+            this.pila.apilar(res);
 
             this.mostrarPantalla();
         }
@@ -191,7 +210,7 @@ class CalculadoraRPN{
         if (this.pila.size() >= 1){
             var op = this.pila.desapilar();
             var res = Math.atan(op);
-            this.pila.apilar(result);
+            this.pila.apilar(res);
 
             this.mostrarPantalla();
         }
