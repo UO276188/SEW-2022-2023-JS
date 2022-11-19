@@ -8,9 +8,14 @@ class Calculadora{
         this.op1 = "";
         this.op2 = "";
         this.operador = "";
-        this.expresion = "";
+        this.pantalla = "";
         this.eval = false;
         this.inicializar();
+
+
+        this.lastOp ="";
+        this.lastOp1 ="";
+        this.lastOp2 ="";
         
     }
     inicializar(){
@@ -77,62 +82,95 @@ class Calculadora{
     
     digitos(numero){
         if (this.eval){ //operacion ya evaluada
-            this.expresion = "";
+            this.pantalla = "";
             this.eval = false;
             this.mostrarPantalla();
         }
         
-        this.expresion += String(numero);
+        this.pantalla += String(numero);
         
         this.mostrarPantalla();
     }
 
     punto(){
-        this.expresion += ".";
+        this.pantalla += ".";
         this.mostrarPantalla();
     }
 
     // OPERACIONES 
 
     suma(){
-        this.expresion += "+";
-        this.mostrarPantalla();
-        this.operador = "+";
-        if (this.eval){
-            this.eval = false;
+        if (this.operador != ""){
+            this.op2 = new Number(this.pantalla);
+            this.pantalla = eval(this.op1 + this.operador + this.op2); 
+            this.op1 = new Number(this.pantalla);
+            this.op2 = "";
+            this.mostrarPantalla();
+        } else{
+            this.op1 = new Number (this.pantalla);
+            
         }
+        
+        this.eval = false;
+        this.pantalla = "";
+        this.operador = "+";
         
     }
 
     resta(){
-        this.expresion += "-";
-        this.mostrarPantalla();
-        this.operador = "-";
-        if (this.eval){
-            this.eval = false;
+        if (this.operador != ""){
+            this.op2 = new Number(this.pantalla);
+            this.pantalla = eval(this.op1 + this.operador + this.op2); 
+            this.op1 = new Number(this.pantalla);
+            this.op2 = "";
+            this.mostrarPantalla();
+        } else{
+            this.op1 =  new Number(this.pantalla);
         }
+       
+        this.eval = false;
+        this.pantalla = "";
+        this.operador = "-";
+        
     }
 
     multiplicacion(){
-        this.expresion += "*";
-        this.mostrarPantalla();
-        this.operador = "*";
-        if (this.eval){
-            this.eval = false;
+        if (this.operador != ""){
+            this.op2 = new Number(this.pantalla);
+            this.pantalla = eval(this.op1 + this.operador + this.op2); 
+            this.op1 = new Number(this.pantalla);
+            this.op2 = "";
+            this.mostrarPantalla();
+        } else{
+            this.op1 = new Number (this.pantalla);
+            
         }
+        
+        this.eval = false;
+        this.pantalla = "";
+        this.operador = "*";
+
     }
 
     division(){
-        this.expresion += "/";
-        this.mostrarPantalla();
-        this.operador = "/";
-        if (this.eval){
-            this.eval = false;
+        if (this.operador != ""){
+            this.op2 = new Number(this.pantalla);
+            this.pantalla = eval(this.op1 + this.operador + this.op2); 
+            this.op1 = new Number(this.pantalla);
+            this.op2 = "";
+            this.mostrarPantalla();
+        } else{
+            this.op1 = new Number (this.pantalla);
+            
         }
+        this.eval = false;
+        this.pantalla = "";
+        this.operador = "/";
+
     }
 
     mrc(){
-        this.expresion = this.memoria;
+        this.pantalla = this.memoria;
         this.mostrarPantalla();
 
         
@@ -143,11 +181,11 @@ class Calculadora{
 
     mMenos(){
         this.igual();
-        this.memoria -= this.expresion;
+        this.memoria -= this.pantalla;
     }
     mMas(){
         this.igual();
-        this.memoria += this.expresion;
+        this.memoria += this.pantalla;
     }
 
 
@@ -155,34 +193,36 @@ class Calculadora{
         this.op1 = "";
         this.op2 = "";
         this.operador = "";
-        this.expresion = "";
+        this.pantalla = "";
         
-        this.expresion = "0";
+        this.pantalla = "0";
         this.mostrarPantalla();
-        this.expresion = "";
+        this.pantalla = "";
     }
 
     CE(){
-        this.expresion = "0";
+        this.pantalla = "0";
         this.mostrarPantalla();
-        this.expresion = "";
+        this.pantalla = "";
     }
     masMenos(){
-       if (this.expresion != "") {
-        this.expresion = eval(this.expresion + '*-1');
+       if (this.pantalla != "") {
+        this.pantalla = eval(this.pantalla + '*-1');
         this.mostrarPantalla();
        }
     }
     raiz(){
         //TODO No usar math
-        this.expresion = Math.sqrt(new Number(this.expresion));
+        //this.pantalla = Math.sqrt(new Number(this.pantalla));
+        this.pantalla = eval(new Number(this.pantalla)**(1/2));
         this.mostrarPantalla();
+        this.eval = true;
     }
     porcentaje(){
         if (this.operador=="*" || this.operador=="/"){
-            this.expresion =eval(this.expresion + '/100');
+            this.pantalla =eval(this.pantalla + '/100');
         } else {
-            this.expresion = eval(new Number(this.expresion) + '/100' + '*' + this.op1);
+            this.pantalla = eval(new Number(this.pantalla) + '/100' + '*' + this.op1);
         }
 
         this.igual();
@@ -190,17 +230,30 @@ class Calculadora{
     }
 
     igual(){
-       
-        try{
-            this.expresion = eval(this.expresion);
-           
-        } catch(err){
-            alert("Error = " + err);
-            this.expresion="0";
+        if (this.eval == false){
+            this.op2 = new Number(this.pantalla);
+        } else{
+            this.op1 = this.lastOp1;
+            this.op2 = this.lastOp2;
+            this.operador = this.lastOp;
         }
         
+        try{
+            this.pantalla = eval(this.op1 + this.operador + '(' +this.op2 +')');
+        } catch(err){
+            alert("Error = " + err);
+            this.pantalla="0";
+        }
+
+        //save for the next igual
+        this.lastOp = this.operador;
+        this.lastOp1 = this.pantalla;
+        this.lastOp2 = this.op2;
+        
+        
+
         //TODO decimales : multiplicar por el numero de decimales y luego dividir
-        this.expresion = new Number(this.expresion);
+        this.pantalla = new Number(this.pantalla);
         this.mostrarPantalla();
 
         this.eval = true;
@@ -210,79 +263,201 @@ class Calculadora{
     }
 
     mostrarPantalla(){
-        document.querySelector('body > form > input[type="text"]').value = this.expresion;
+        document.querySelector('body > form > input[type="text"]').value = this.pantalla;
     }
 }
+
 
 class CalculadoraCientifica extends Calculadora{
     constructor(){
         super();
         this.parentesis = false;
-        this.degr = false;
+        this.degr = 0;  //0= degrees , 1=radianes, 2 = grad
+        this.hype = false; //if true -> hyperbolicas
+        this.upArrow = false; //If TRUE en vez de seno coseno y tangente -> arsin, arcos, atan
+    }
+
+    igual(){
+       
+        try{
+            this.pantalla = eval(this.pantalla);
+           
+        } catch(err){
+            alert("Error = " + err);
+            this.pantalla="0";
+        }
+        
+        //TODO decimales : multiplicar por el numero de decimales y luego dividir
+        this.pantalla = new Number(this.pantalla);
+        this.mostrarPantalla();
+
+        this.eval = true;
+        this.op1 = "";
+        this.op2 = "";
+        this.operador = "";
+    }
+
+
+    suma(){
+        this.pantalla += "+";
+        this.mostrarPantalla();
+        this.operador = "+";
+        if (this.eval){
+            this.eval = false;
+        }
+        
+    }
+
+    resta(){
+        this.pantalla += "-";
+        this.mostrarPantalla();
+        this.operador = "-";
+        if (this.eval){
+            this.eval = false;
+        }
+    }
+
+    multiplicacion(){
+        this.pantalla += "*";
+        this.mostrarPantalla();
+        this.operador = "*";
+        if (this.eval){
+            this.eval = false;
+        }
+    }
+
+    division(){
+        this.pantalla += "/";
+        this.mostrarPantalla();
+        this.operador = "/";
+        if (this.eval){
+            this.eval = false;
+        }
     }
 
     pickLast(){
         if (this.operador!= ""){
-            var s = this.expresion.split(/[\\-|\\+|\\*|\\-\\]/);
+            var s = this.pantalla.split(/[\\-|\\+|\\*|\\-\\]/);
             var length = s.length;
             var res = s[length-1]; //numero a pasar por la funcion
             var lengthNum = res.length;
-            var newExp = this.expresion.substring(0, this.expresion.length-lengthNum);
-            this.expresion = newExp;
+            var newExp = this.pantalla.substring(0, this.pantalla.length-lengthNum);
+            this.pantalla = newExp;
             return new Number(res);
         }
         else {
-            var newExp = eval(this.expresion);
-            this.expresion = "";
+            var newExp = eval(this.pantalla);
+            this.pantalla = "";
             return newExp;
         }
         
     }
 
+    
     sin(){
         var number = this.pickLast();
-        this.expresion += Math.sin(number);
+        if (this.upArrow == false){
+            if (this.hype == false){
+                this.pantalla += Math.sin(this.trigonometric(number));
+            } else {
+                this.pantalla += Math.sinh(this.trigonometric(number));
+            }
+        } else {
+            if (this.hype == false){
+                this.pantalla += Math.asin(this.trigonometric(number));
+            } else {
+                this.pantalla += Math.asinh(this.trigonometric(number));
+            }
+        }
         this.mostrarPantalla();
         this.eval = true;
     }
     cos(){
         var number = this.pickLast();
-        this.expresion += Math.cos(number);
+        if (this.upArrow == false){
+            if (this.hype == false){
+                this.pantalla += Math.cos(this.trigonometric(number));
+            } else {
+                this.pantalla += Math.cosh(this.trigonometric(number));
+            }
+        } else {
+            if (this.hype == false){
+                this.pantalla += Math.acos(this.trigonometric(number));
+            } else {
+                this.pantalla += Math.acosh(this.trigonometric(number));
+            }
+        }
         this.mostrarPantalla();
         this.eval = true;
     }
     tan(){
         var number = this.pickLast();
-        this.expresion += Math.tan(number);
-        this.mostrarPantalla();
-        this.eval = true;
-    }
-    log(){
-        var number = this.pickLast();
-        this.expresion += Math.log10(number);
-        this.mostrarPantalla();
-        this.eval = true;
-    }
-    exp(){
-        var number = this.pickLast();
-        this.expresion += Math.exp(number);
+        if (this.upArrow == false){
+            if (this.hype == false){
+                this.pantalla += Math.tan(this.trigonometric(number));
+            } else {
+                this.pantalla += Math.tanh(this.trigonometric(number));
+            }
+        } else {
+            if (this.hype == false){
+                this.pantalla += Math.atan(this.trigonometric(number));
+            } else {
+                this.pantalla += Math.atanh(this.trigonometric(number));
+            }
+        }
         this.mostrarPantalla();
         this.eval = true;
     }
 
+    trigonometric(number){
+        switch(this.degr){
+            case 0: // radians -> DEG
+                return new Number(number * (Math.PI/180));
+            case 1: //rad
+                return new Number(number);
+            case 2: //rad -> GRAD
+            return new Number(number * (Math.PI/200));
+        }
+        
+    }
+
+
+
+    log(){
+        var number = this.pickLast();
+        this.pantalla += Math.log10(number);
+        this.mostrarPantalla();
+        this.eval = true;
+    }
+    exp(){
+        this.pantalla += "*10**";
+        this.mostrarPantalla();
+    }
+
     cuadrado(){
         var number = this.pickLast();
-        this.expresion += Math.pow(number, 2);
+        this.pantalla += Math.pow(number, 2);
         this.mostrarPantalla();
         this.eval = true;
     }
 
     pot10(){
         var number = this.pickLast();
-        this.expresion += Math.pow(10, number);
+        this.pantalla += Math.pow(10, number);
         this.mostrarPantalla();
         this.eval = true;
     }
+
+    potencia(){
+        this.pantalla += "**";
+        this.mostrarPantalla();
+    }
+
+    mod(){
+        this.pantalla += "%";
+        this.mostrarPantalla();
+    }
+
 
     pi(){
         this.digitos(Math.PI);
@@ -291,46 +466,113 @@ class CalculadoraCientifica extends Calculadora{
     factorial(){
         var total = 1;
         this.igual();
-        for (var i=1 ; i <= this.expresion; i++){
+        for (var i=1 ; i <= this.pantalla; i++){
             total = total * i;
         }
-        this.expresion = total;
+        this.pantalla = total;
         this.mostrarPantalla();
         
     }
 
     abreParentesis(){
         if (this.eval){
-            this.expresion = "";
+            this.pantalla = "";
             this.eval = false;
         }
-        this.expresion += "(";
+        this.pantalla += "(";
         this.mostrarPantalla();
     }
 
     cierraParentesis(){
-        this.expresion += ")";
+        this.pantalla += ")";
         this.mostrarPantalla();
         this.operador = "";
     }
 
     
     deg(){
+        switch(this.degr){
+            case 0: //Deg to Rad
+                this.degr = 1; 
+                document.querySelector('input[type="button"][value="DEG"]').value = "RAD";
+                break;
+            case 1:  //Rad to Grad
+                this.degr = 2; 
+                document.querySelector('input[type="button"][value="RAD"]').value = "GRAD";
+                break;
+            case 2:  //Grad to DEG
+                this.degr = 0; 
+                document.querySelector('input[type="button"][value="GRAD"]').value = "DEG";
+                break;
+        }
         
-
+        
+        /*
         if(this.degr == true){
-            this.expresion = eval(this.expresion) * (Math.PI/180);
+            this.pantalla = eval(this.pantalla) * (Math.PI/180);
             this.mostrarPantalla();
             this.degr = false;
 
         }else{
             
-            this.expresion = eval(this.expresion) * (180/Math.PI);
+            this.pantalla = eval(this.pantalla) * (180/Math.PI);
             this.mostrarPantalla();
             this.degr = true;
            
+        } */
+    }
+
+    hyp(){
+        if (this.hype == false){ //añadir hype
+            this.hype = true;
+            if (this.upArrow == false){
+                document.querySelector('input[type="button"][value="sin"]').value = "sinh";
+                document.querySelector('input[type="button"][value="cos"]').value = "cosh";
+                document.querySelector('input[type="button"][value="tan"]').value = "tanh";
+            } else { //a
+                document.querySelector('input[type="button"][value="asin"]').value = "asinh";
+                document.querySelector('input[type="button"][value="acos"]').value = "acosh";
+                document.querySelector('input[type="button"][value="atan"]').value = "atanh";
+            }
+        } else { //quitar hype            
+            this.hype = false;
+            if (this.upArrow == false){
+                document.querySelector('input[type="button"][value="sinh"]').value = "sin";
+                document.querySelector('input[type="button"][value="cosh"]').value = "cos";
+                document.querySelector('input[type="button"][value="tanh"]').value = "tan";
+            } else { //a
+                document.querySelector('input[type="button"][value="asinh"]').value = "sin";
+                document.querySelector('input[type="button"][value="acosh"]').value = "cos";
+                document.querySelector('input[type="button"][value="atanh"]').value = "tan";
+            }
         }
     }
+    shift(){
+        if (this.upArrow == false){ //añadir a
+            this.upArrow = true;
+            if (this.hype == false){
+                document.querySelector('input[type="button"][value="sin"]').value = "asin";
+                document.querySelector('input[type="button"][value="cos"]').value = "acos";
+                document.querySelector('input[type="button"][value="tan"]').value = "atan";
+            } else { //h
+                document.querySelector('input[type="button"][value="sinh"]').value = "asinh";
+                document.querySelector('input[type="button"][value="cosh"]').value = "acosh";
+                document.querySelector('input[type="button"][value="tanh"]').value = "atanh";
+            }
+        } else { //quitar a
+            this.upArrow = false;
+            if (this.hype == false){
+                document.querySelector('input[type="button"][value="asin"]').value = "sin";
+                document.querySelector('input[type="button"][value="acos"]').value = "cos";
+                document.querySelector('input[type="button"][value="atan"]').value = "tan";
+            } else { //
+                document.querySelector('input[type="button"][value="asinh"]').value = "sinh";
+                document.querySelector('input[type="button"][value="acosh"]').value = "cosh";
+                document.querySelector('input[type="button"][value="atanh"]').value = "tanh";
+            }
+        }
+    }
+
 
 
     //MEMORIAS----------------
@@ -339,12 +581,12 @@ class CalculadoraCientifica extends Calculadora{
         this.eval = true;
     }
     mr(){
-        this.expresion = this.memoria;
+        this.pantalla = this.memoria;
         this.mostrarPantalla();
         this.eval = true;
     }
     ms(){
-        this.memoria = this.expresion;
+        this.memoria = this.pantalla;
         this.eval = true;
     }
 
@@ -354,9 +596,9 @@ class CalculadoraCientifica extends Calculadora{
        this.mostrarPantalla();
     }
     borraFlecha(){
-        if (this.expresion!= ""){
-            var newExp = this.expresion.substring(0, this.expresion.length-1);
-            this.expresion = newExp;
+        if (this.pantalla!= ""){
+            var newExp = this.pantalla.substring(0, this.pantalla.length-1);
+            this.pantalla = newExp;
             this.mostrarPantalla();
         }
     }

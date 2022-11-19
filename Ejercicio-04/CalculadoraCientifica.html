@@ -6,7 +6,7 @@
     <!--Definición de la ventana gráfica-->
 	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
 
-    <title>Calculadora básica</title>
+    <title>Calculadora científica</title>
     
     <script src="CalculadoraCientifica.js"></script>
     <link rel="stylesheet" type="text/css" href="CalculadoraCientifica.css" />
@@ -15,14 +15,11 @@
     <h1>Calculadora Científica</h1>
     
     <form>
-        
-        
-
         <input type="text" id="Label" value = "0" disabled>
 
         <input type="button" value="DEG" onclick="calculadora.deg()">
-        <input type="button" value="HYP" onclick="calculadora.mrc()">
-        <input type="button" value="F-E" onclick="calculadora.mMas()">
+        <input type="button" value="HYP" onclick="calculadora.hyp()">
+        <input type="button" value="F-E" onclick="calculadora.fe()">
         <label for="Label">Windows 10</label>
 
 
@@ -34,7 +31,7 @@
 
 
         <input type="button" value="x^2" onclick="calculadora.cuadrado()"> 
-        <input type="button" value="x^y" onclick=""> 
+        <input type="button" value="x^y" onclick="calculadora.potencia()"> 
         <input type="button" value="sin" onclick="calculadora.sin()"> 
         <input type="button" value="cos" onclick="calculadora.cos()"> 
         <input type="button" value="tan" onclick="calculadora.tan()"> 
@@ -44,10 +41,10 @@
         <input type="button" value="10^x" onclick="calculadora.pot10()"> 
         <input type="button" value="log" onclick="calculadora.log()"> 
         <input type="button" value="Exp" onclick="calculadora.exp()"> <!--Ex-->
-        <input type="button" value="Mod" onclick="">
+        <input type="button" value="Mod" onclick="calculadora.mod()">
 
 
-        <input type="button" value="&uarr;" onclick=""> <!--Flecha arriba-->
+        <input type="button" value="&uarr;" onclick="calculadora.shift()"> <!--Flecha arriba-->
         <input type="button" value="CE" onclick="calculadora.CE()"> <!-- eliminas lo ultimo que has metido-->
         <input type="button" value="C" onclick="calculadora.borrar()"> <!--C=Borrar todo-->
         <input type="button" value="←" onclick="calculadora.borraFlecha()"> <!--Borra ultimo caracter-->
