@@ -67,6 +67,9 @@ class CalculadoraRPN{
             if (event.key === '.') {
                 calculadora.punto();
             }
+            if (event.code === 'KeyR') {    //R = raiz
+                calculadora.raiz();
+            }
         
             
             if (event.key === 'Delete') { // Supr
@@ -151,6 +154,16 @@ class CalculadoraRPN{
             var op1 = this.pila.desapilar();
             var result = parseFloat(op1) / parseFloat(op2);
             this.pila.apilar(result);
+
+            this.mostrarPantalla();
+        }
+    }
+
+    raiz(){
+        if (this.pila.size() >= 1){
+            var op = this.pila.desapilar();
+            var res = Math.sqrt(op);
+            this.pila.apilar(res);
 
             this.mostrarPantalla();
         }
