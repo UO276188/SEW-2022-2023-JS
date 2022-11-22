@@ -1,0 +1,85 @@
+body {
+	background-color: #000;
+}
+h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: azure;
+    text-align: center;
+}
+form{
+    padding: 1em;
+    border-radius: 1em;
+    background-color: darkgray;
+	margin: 0 auto;
+	
+    display: grid;
+	grid-gap: 10px;
+	
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    max-width: 20em;
+}
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    font-size: 0.75em;
+    justify-self: end;
+}
+label:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+label:nth-child(2){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+
+textarea{
+    resize: none;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+textarea:nth-child(1){
+    height: 10em;
+}
+
+textarea:nth-child(2){
+    height: 2.5em;
+}
+
+input[type=button]{
+    border-radius: 0.5em;
+    height: 3em;
+}
+
+input[type=button][value="ENTER"]{
+    background-color: #5CF079;
+}
+
+input[type=button][value="x"],
+input[type=button][value="/"],
+input[type=button][value="-"],
+input[type=button][value="+"]{
+	background-color: #e9d78a;
+}
+
+input[type=button][value="Volumen"],
+input[type=button][value="Perdidas"],
+input[type=button][value="Consumo"],
+input[type=button][value="Coste"]{
+	background-color: #FFB6AF;
+}
+
+
+input[type=button][value="C"],
+input[type=button][value="CE"]{
+	background-color: #81C1CF;
+}
+
+input[type=button][value="Cocina"],
+input[type=button][value="Salon"],
+input[type=button][value="Dormitorio"],
+input[type=button][value="Baño"]{
+	background-color: #D291BC;
+}

@@ -10,7 +10,7 @@ class Calculadora{
         this.operador = "";
         this.pantalla = "";
         this.eval = false;
-        this.inicializar();
+        document.addEventListener('keydown', this.cargarBotones.bind(this));
 
 
         this.lastOp ="";
@@ -18,65 +18,67 @@ class Calculadora{
         this.lastOp2 ="";
         
     }
-    inicializar(){
-        document.addEventListener('keydown', function (event) {
-            if (event.key >= '0' && event.key <= '9') {
-                calculadora.digitos(event.key);
-            }
-            if (event.key === 'Enter') {
-                calculadora.igual();
-            }
-            
-            
-            if (event.key === '/') {
-                calculadora.division();
-            }
-            if (event.key === '*') {
-                calculadora.multiplicacion();
-            }
-            if (event.key === '-') {
-                calculadora.resta();
-            }
-            if (event.key === '+') {
-                calculadora.suma();
-            }
-            if (event.key === '.') {
-                calculadora.punto();
-            }
+
+    
+    cargarBotones(event){
+        if (event.key >= '0' && event.key <= '9') {
+            calculadora.digitos(event.key);
+        }
+        if (event.key === 'Enter') {
+            calculadora.igual();
+        }
         
-            
-            if (event.key === 'Delete') { // Supr
-                calculadora.borrar();
-            }
-            if (event.key === 'Backspace') {
-                calculadora.CE();
-            }
-
-            //MRC
-            if (event.code === 'KeyM') {//Tecla M -> MRC
-                calculadora.mrc();
-            }
-            //M+
-            if (event.code === 'KeyK') { //Tecla K -> M+
-                calculadora.mMas();
-            }
-            //M-
-            if (event.code === 'KeyL') { //Tecla L -> M-
-                calculadora.mMenos();
-            }
-
-            //%
-            if (event.key === '%') {
-                calculadora.porcentaje();
-            }
-            //Raiz
-            if (event.code === 'KeyR') {
-                calculadora.raiz();
-            }
-
-        });
-
         
+        if (event.key === '/') {
+            calculadora.division();
+        }
+        if (event.key === '*') {
+            calculadora.multiplicacion();
+        }
+        if (event.key === '-') {
+            calculadora.resta();
+        }
+        if (event.key === '+') {
+            calculadora.suma();
+        }
+        if (event.key === '.') {
+            calculadora.punto();
+        }
+    
+        
+        if (event.key === 'Delete') { // Supr
+            calculadora.borrar();
+        }
+        if (event.key === 'Backspace') {
+            calculadora.CE();
+        }
+
+        //MRC
+        if (event.code === 'KeyM') {//Tecla M -> MRC
+            calculadora.mrc();
+        }
+        //M+
+        if (event.code === 'KeyK') { //Tecla K -> M+
+            calculadora.mMas();
+        }
+        //M-
+        if (event.code === 'KeyL') { //Tecla L -> M-
+            calculadora.mMenos();
+        }
+
+        //%
+        if (event.key === 'KeyP') { //Tecla P -> %
+            calculadora.porcentaje();
+        }
+        //Raiz
+        if (event.code === 'KeyR') {
+            calculadora.raiz();
+        }
+
+        //Mas/Menos
+        if (event.code === 'KeyS') {
+            calculadora.masMenos();
+        }
     }
 
     
@@ -277,6 +279,106 @@ class CalculadoraCientifica extends Calculadora{
         this.upArrow = false; //If TRUE en vez de seno coseno y tangente -> arsin, arcos, atan
     }
 
+    cargarBotones(event){
+        super.cargarBotones(event);
+        //DEG
+        if (event.code === 'KeyD') {//Tecla D -> DEG
+            calculadora.deg();
+        }
+
+        //HYP
+        if (event.code === 'KeyH') {//Tecla H -> HYP
+            calculadora.hyp();
+        }
+
+        //F-E
+        if (event.code === 'KeyE') {//Tecla F -> F-E
+            calculadora.fe();
+        }
+
+        //MC
+        if (event.code === 'KeyC') {//Tecla C -> MC
+            calculadora.mc();
+        }
+        
+        //MR
+        if (event.code === 'KeyQ') {//Tecla Q -> MR
+            calculadora.mr();
+        }
+        
+        //MS
+        if (event.code === 'KeyW') {//Tecla W -> MS
+            calculadora.ms();
+        }
+
+
+        if (event.shiftKey) { // Shift
+            calculadora.shift();
+        }
+
+
+        //sin
+        if (event.code === 'KeyI') {//Tecla I -> sin
+            calculadora.sin();
+        }
+        //cos
+        if (event.code === 'KeyC') {//Tecla C -> cos
+            calculadora.cos();
+        }
+        //tan
+        if (event.code === 'KeyT') {//Tecla T -> tan
+            calculadora.tan();
+        }
+
+        //Borrar flecha
+        if (event.code === 'KeyB') {//Tecla B -> Borrar
+            calculadora.borraFlecha();
+        }
+
+
+        //Factorial
+        if (event.code === 'KeyF') {//Tecla F -> factorial
+            calculadora.factorial();
+        }
+
+        //X^2
+        if (event.code === 'KeyY') {//Tecla Y -> x^2
+            calculadora.cuadrado();
+        }
+
+        //X^Y
+        if (event.code === 'KeyA') {//Tecla A -> x^y
+            calculadora.potencia();
+        }
+
+        //10^x
+        if (event.code === 'KeyG') {//Tecla G -> 10^x
+            calculadora.pot10();
+        }
+        //log
+        if (event.code === 'KeyJ') {//Tecla J -> log
+            calculadora.log();
+        }
+
+        //Exp
+        if (event.code === 'KeyN') {//Tecla N -> Exp
+            calculadora.exp();
+        }
+        //Mod
+        if (event.code === 'KeyU') {//Tecla U -> mOD
+            calculadora.mod();
+        }
+
+        //()
+        if (event.code === 'KeyV') {//Tecla v -> (
+            calculadora.abreParentesis();
+        }
+        if (event.code === 'KeyW') {//Tecla W -> )
+            calculadora.cierraParentesis();
+        }
+
+    }
+
     igual(){
        
         try{
@@ -348,7 +450,7 @@ class CalculadoraCientifica extends Calculadora{
         else {
             var newExp = eval(this.pantalla);
             this.pantalla = "";
-            return newExp;
+            return new Number(newExp);
         }
         
     }
@@ -505,21 +607,6 @@ class CalculadoraCientifica extends Calculadora{
                 document.querySelector('input[type="button"][value="GRAD"]').value = "DEG";
                 break;
         }
-        
-        
-        /*
-        if(this.degr == true){
-            this.pantalla = eval(this.pantalla) * (Math.PI/180);
-            this.mostrarPantalla();
-            this.degr = false;
-
-        }else{
-            
-            this.pantalla = eval(this.pantalla) * (180/Math.PI);
-            this.mostrarPantalla();
-            this.degr = true;
-           
-        } */
     }
 
     hyp(){
@@ -571,6 +658,26 @@ class CalculadoraCientifica extends Calculadora{
                 document.querySelector('input[type="button"][value="atanh"]').value = "tanh";
             }
         }
+    }
+
+    fe(){ /*
+        var aux = this.pantalla.value.length;
+        var x = 1;
+
+        for (let i = 0; i <= aux - 2; i++) {
+            x = x * 10;
+        }
+
+        var numero = eval(this.pantalla.value + " / " + x);
+        var potencia = eval(aux + " - " + 1);
+
+        // this.pantalla.value = numero + "*" + 10 + "**" + potencia;
+        this.pantalla.value = numero + "e" + "+" + potencia;
+        */
+        var number = this.pickLast();
+        this.pantalla += number.toExponential();
+        this.mostrarPantalla();
+        this.eval = true;
     }
 
 
