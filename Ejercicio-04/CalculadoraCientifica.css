@@ -1,12 +1,12 @@
 /*Especificidad: 001*/
 body {
 	background-color: #000;
+    color: #ffff;
 }
 
 /*Especificidad: 001*/
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #ffff;
     text-align: center;
 }
 
