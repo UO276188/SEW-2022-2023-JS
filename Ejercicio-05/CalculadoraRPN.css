@@ -1,11 +1,16 @@
+/*Especificidad: 001*/
 body {
 	background-color: #000;
+    color: #fff;
 }
+
+/*Especificidad: 001*/
 h1{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: azure;
     text-align: center;
 }
+
+/*Especificidad: 001*/
 form{
     padding: 1em;
     border-radius: 1em;
@@ -18,6 +23,8 @@ form{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     max-width: 20em;
 }
+
+/*Especificidad: 001*/
 label{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     grid-column-start: 1;
@@ -26,31 +33,36 @@ label{
     justify-self: end;
 }
 
+/*Especificidad: 001*/
 textarea{
     resize: none;
     grid-column-start: 1;
     grid-column-end: 6;
 }
 
+/*Especificidad: 011*/
 textarea:nth-child(1){
     height: 10em;
 }
 
+/*Especificidad: 011*/
 textarea:nth-child(2){
     height: 2.5em;
 }
 
+/*Especificidad: 011*/
 input[type=button]{
     border-radius: 0.5em;
     height: 3em;
 }
 
+/*Especificidad: 021*/
 input[type=button][value="ENTER"]{
     background-color: #5CF079;
 }
 
 
-
+/*Especificidad: 021*/
 input[type=button][value="x"],
 input[type=button][value="/"],
 input[type=button][value="-"],
@@ -58,12 +70,13 @@ input[type=button][value="+"]{
 	background-color: #FFB6AF;
 }
 
-
+/*Especificidad: 021*/
 input[type=button][value="C"],
 input[type=button][value="CE"]{
 	background-color: #81C1CF;
 }
 
+/*Especificidad: 021*/
 input[type=button][value="sin"],
 input[type=button][value="asin"],
 input[type=button][value="cos"],
