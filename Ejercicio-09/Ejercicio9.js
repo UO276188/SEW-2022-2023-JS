@@ -65,7 +65,9 @@ meteo.verDatos = function(){
     
     var stringDatos = "<section>"
     stringDatos += "<h2>" + meteo.name + ", "+  meteo.datos.pais + "</h2>";
-    stringDatos += "<img src=https://openweathermap.org/img/w/" + meteo.datos.icon + ".png alt=" + "\"" + meteo.datos.description+ "\"" + "/>";
+    var alt = meteo.datos.description;
+    alt = alt.replace(/\s+/g,"_");
+    stringDatos += "<img src=https://openweathermap.org/img/w/" + meteo.datos.icon + ".png alt=" + "\"" + alt + "\"" + "/>";
     stringDatos += "<p>Fecha: " + new Date(meteo.datos.dt).toLocaleDateString("es-ES") + ", " + new Date(meteo.datos.dt).toLocaleTimeString("es-ES") + "</p>";
     stringDatos += "<p>Tiempo: " + meteo.datos.description + "</p>";
     stringDatos += "<p>Coordenadas:</p>";
