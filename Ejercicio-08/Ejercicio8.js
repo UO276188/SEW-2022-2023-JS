@@ -27,7 +27,9 @@ meteo.verDatos = function(){
     $("section").remove();
     var stringDatos = "<section>"
     stringDatos += "<h2>" + meteo.datos.name + ", "+  meteo.datos.sys.country + "</h2>";
-    stringDatos += "<img src=https://openweathermap.org/img/w/" + meteo.datos.weather[0].icon + ".png alt=" + meteo.datos.weather[0].description+ "\"/>";
+    var alt = meteo.datos.weather[0].description;
+    alt = alt.replace(/\s+/g,"_")
+    stringDatos += "<img src=https://openweathermap.org/img/w/" + meteo.datos.weather[0].icon + ".png alt=" +  alt  + "/>";
     stringDatos += "<p>Fecha: " + new Date(meteo.datos.dt *1000).toLocaleDateString() + ", " + new Date(meteo.datos.dt *1000).toLocaleTimeString() + "</p>";
     stringDatos += "<p>Tiempo: " + meteo.datos.weather[0].description + "</p>";
     stringDatos += "<p>Coordenadas:</p>";
