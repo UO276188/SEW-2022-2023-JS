@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="Sara María Ramírez Pérez" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+
+    <title>SEW - Ejercicio 11.5</title>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHQ3ltlQ8YlKnrdkXVrAshxS5qkxm4mz4"></script>
+    
+    <script src="Ruta.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="Ruta.css" />
+</head>
+<body>
+    <h1>Calcular ruta</h1>
+    <p>Selecciona un destino para obtener las direcciones para llegar desde tu ubicación.</p>
+    <form name="ruta">
+        <p>
+            <label for="final">Destino:</label>
+            <input type="text" id="final"> 
+        </p>
+        <label for="travel">Selecciona la manera de viajar:</label>
+        <select id="travel">
+            <option value="DRIVING" selected>En coche</option>
+            <option value="WALKING">A pie</option>
+            <option value="BICYCLING">En bicicleta</option>
+            <option value="TRANSIT">Transporte público</option>
+        </select>
+        <input type="button" value="Obtener direcciones" onClick = "mapa.dibujarMapa();"/>
+    </form>
+    
+    <main></main>
+    <article></article>
+        
+</body>
+</html>
