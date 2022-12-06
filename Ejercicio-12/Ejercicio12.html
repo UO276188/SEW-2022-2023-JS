@@ -14,7 +14,10 @@
 <body onload="archivos.validarNavegador();">
     <h1>API File: Importa archivos</h1>
     
-    <p><input type="file" name="Archivos" onchange="archivos.procesarArchivos(this.files);" ></p>
+    <p>
+        <label for="subirArchivos">Escoge el archivo para mostrar:</label>
+        <input id="subirArchivos" type="file" name="Archivos" onchange="archivos.procesarArchivos(this.files);" >
+    </p>
     
    <main></main>
    
