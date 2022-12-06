@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Placemark>
+<name>Sara María Ramírez Pérez - Nacimiento</name>
+<description>Fecha de nacimiento: 2001-04-29</description>
+<Point>
+<coordinates>-5.936102335619281, 43.55205777798353, 26</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Sara María Ramírez Pérez - Residencia</name>
+<description>Fecha de nacimiento: 2001-04-29</description>
+<Point>
+<coordinates>-5.922366444815168, 43.55539516182748, 22</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Silvia Suárez Prendes - Nacimiento</name>
+<description>Fecha de nacimiento: 2001-02-27</description>
+<Point>
+<coordinates>-6.113178509202413, 43.48758492992525, 57</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Silvia Suárez Prendes - Residencia</name>
+<description>Fecha de nacimiento: 2001-02-27</description>
+<Point>
+<coordinates>-6.075515880166677, 43.55789427316034, 8</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Celia Melendi Lavandera - Nacimiento</name>
+<description>Fecha de nacimiento: 2001-09-01</description>
+<Point>
+<coordinates>-5.826971044800217, 43.37602335482933, 166</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Celia Melendi Lavandera - Residencia</name>
+<description>Fecha de nacimiento: 2001-09-01</description>
+<Point>
+<coordinates>-5.663191627791036, 43.391954193048434, 258</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Iván Vega García - Nacimiento</name>
+<description>Fecha de nacimiento: 2001-03-06</description>
+<Point>
+<coordinates>-5.936102335619281, 43.55205777798353, 26</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Iván Vega García - Residencia</name>
+<description>Fecha de nacimiento: 2001-03-06</description>
+<Point>
+<coordinates>-5.926744769381713, 43.56236142960182, 27</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Elena Selgas Fernández - Nacimiento</name>
+<description>Fecha de nacimiento: 2001-12-02</description>
+<Point>
+<coordinates>-6.113777037769097, 43.4880297103507, 57</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Elena Selgas Fernández - Residencia</name>
+<description>Fecha de nacimiento: 2001-12-02</description>
+<Point>
+<coordinates>-7.558507437897362, 43.006172367015694, 454</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Laura Gómez Menéndez - Nacimiento</name>
+<description>Fecha de nacimiento: 2001-01-01</description>
+<Point>
+<coordinates>-6.502905988432673, 43.23860446899653, 523</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Laura Gómez Menéndez - Residencia</name>
+<description>Fecha de nacimiento: 2001-01-01</description>
+<Point>
+<coordinates>-5.858897926390938, 43.36477581220521, 242</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Miguel Gayol Pertierra - Nacimiento</name>
+<description>Fecha de nacimiento: 2001-05-25</description>
+<Point>
+<coordinates>-5.826971044800217, 43.37602335482933, 166</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Miguel Gayol Pertierra - Residencia</name>
+<description>Fecha de nacimiento: 2001-05-25</description>
+<Point>
+<coordinates>-5.874070632221418, 43.367810861051794, 242</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Luis Sánchez de Posada Orihuela - Nacimiento</name>
+<description>Fecha de nacimiento: 2001-08-25</description>
+<Point>
+<coordinates>-5.826971044800217, 43.37602335482933, 166</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Luis Sánchez de Posada Orihuela - Residencia</name>
+<description>Fecha de nacimiento: 2001-08-25</description>
+<Point>
+<coordinates>-5.8639465308722265, 43.35127579914649, 242</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Jairo Castro García - Nacimiento</name>
+<description>Fecha de nacimiento: 2000-12-02</description>
+<Point>
+<coordinates>-6.537775396528275, 43.54528931048142, 0</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Jairo Castro García - Residencia</name>
+<description>Fecha de nacimiento: 2000-12-02</description>
+<Point>
+<coordinates>-5.822732215381706, 43.38906023231635, 166</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Olaya López Muñoz - Nacimiento</name>
+<description>Fecha de nacimiento: 1999-06-25</description>
+<Point>
+<coordinates>-4.050255805933801, 43.34669279059895, 37</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Olaya López Muñoz - Residencia</name>
+<description>Fecha de nacimiento: 1999-06-25</description>
+<Point>
+<coordinates>-5.935794717770648, 43.55961055998111, 27</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Kike Arango Rodríguez - Nacimiento</name>
+<description>Fecha de nacimiento: 1997-03-08</description>
+<Point>
+<coordinates>-5.793418152345481, 43.61141345763119, 56</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Kike Arango Rodríguez - Residencia</name>
+<description>Fecha de nacimiento: 1997-03-08</description>
+<Point>
+<coordinates>-5.83016168210446, 43.59514372868105, 56</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Isabel Macho de Cos - Nacimiento</name>
+<description>Fecha de nacimiento: 1999-05-26</description>
+<Point>
+<coordinates>-4.0532922218672525, 43.34784927362506, 37</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Isabel Macho de Cos - Residencia</name>
+<description>Fecha de nacimiento: 1999-05-26</description>
+<Point>
+<coordinates>-5.850412552325025, 43.353992964099206, 242</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Alex Caso Díaz - Nacimiento</name>
+<description>Fecha de nacimiento: 2000-11-03</description>
+<Point>
+<coordinates>-5.63456233512747, 43.287666968492005, 498</coordinates>
+</Point>
+</Placemark>
+<Placemark>
+<name>Alex Caso Díaz - Residencia</name>
+<description>Fecha de nacimiento: 2000-11-03</description>
+<Point>
+<coordinates>-5.641638742214042, 43.28760384271391, 498</coordinates>
+</Point>
+</Placemark>
+</Document>
+</kml>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name ="author" content ="Sara María Ramírez Pérez" />
+    <!--Definición de la ventana gráfica-->
+	<meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+
+    <title>SEW - Ejercicio 13.2</title>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHQ3ltlQ8YlKnrdkXVrAshxS5qkxm4mz4"></script>
+    <script src="MapaGeoJSON.js"></script>
+    <link rel="stylesheet" type="text/css" href="MapaGeoJSON.css" />
+</head>
+<body onload="archivos.validarNavegador();">
+    <h1>Tu KML</h1>
+    
+    <p>
+        <label for="subirArchivos">Escoge el archivo (.GeoJSON) para mostrar:</label>
+        <input id="subirArchivos" type="file" name="Archivos" onchange="archivos.initMap(this.files);">
+    </p>
+    
+   <main></main>
+    
+</body>
+</html>

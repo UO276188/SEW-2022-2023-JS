@@ -1,0 +1,33 @@
+{
+"type": "FeatureCollection",
+"name": "arbol",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "Sara María Ramírez Pérez - Nacimiento", "description": "Fecha de nacimiento: 2001-04-29" }, "geometry": { "type": "Point", "coordinates": [ -5.936102335619281, 43.552057777983528 ] } },
+{ "type": "Feature", "properties": { "Name": "Sara María Ramírez Pérez - Residencia", "description": "Fecha de nacimiento: 2001-04-29" }, "geometry": { "type": "Point", "coordinates": [ -5.922366444815168, 43.555395161827477 ] } },
+{ "type": "Feature", "properties": { "Name": "Silvia Suárez Prendes - Nacimiento", "description": "Fecha de nacimiento: 2001-02-27" }, "geometry": { "type": "Point", "coordinates": [ -6.113178509202413, 43.487584929925248 ] } },
+{ "type": "Feature", "properties": { "Name": "Silvia Suárez Prendes - Residencia", "description": "Fecha de nacimiento: 2001-02-27" }, "geometry": { "type": "Point", "coordinates": [ -6.075515880166677, 43.557894273160343 ] } },
+{ "type": "Feature", "properties": { "Name": "Celia Melendi Lavandera - Nacimiento", "description": "Fecha de nacimiento: 2001-09-01" }, "geometry": { "type": "Point", "coordinates": [ -5.826971044800217, 43.376023354829329 ] } },
+{ "type": "Feature", "properties": { "Name": "Celia Melendi Lavandera - Residencia", "description": "Fecha de nacimiento: 2001-09-01" }, "geometry": { "type": "Point", "coordinates": [ -5.663191627791036, 43.391954193048434 ] } },
+{ "type": "Feature", "properties": { "Name": "Iván Vega García - Nacimiento", "description": "Fecha de nacimiento: 2001-03-06" }, "geometry": { "type": "Point", "coordinates": [ -5.936102335619281, 43.552057777983528 ] } },
+{ "type": "Feature", "properties": { "Name": "Iván Vega García - Residencia", "description": "Fecha de nacimiento: 2001-03-06" }, "geometry": { "type": "Point", "coordinates": [ -5.926744769381713, 43.562361429601822 ] } },
+{ "type": "Feature", "properties": { "Name": "Elena Selgas Fernández - Nacimiento", "description": "Fecha de nacimiento: 2001-12-02" }, "geometry": { "type": "Point", "coordinates": [ -6.113777037769097, 43.488029710350702 ] } },
+{ "type": "Feature", "properties": { "Name": "Elena Selgas Fernández - Residencia", "description": "Fecha de nacimiento: 2001-12-02" }, "geometry": { "type": "Point", "coordinates": [ -7.558507437897362, 43.006172367015694 ] } },
+{ "type": "Feature", "properties": { "Name": "Laura Gómez Menéndez - Nacimiento", "description": "Fecha de nacimiento: 2001-01-01" }, "geometry": { "type": "Point", "coordinates": [ -6.502905988432673, 43.238604468996527 ] } },
+{ "type": "Feature", "properties": { "Name": "Laura Gómez Menéndez - Residencia", "description": "Fecha de nacimiento: 2001-01-01" }, "geometry": { "type": "Point", "coordinates": [ -5.858897926390938, 43.36477581220521 ] } },
+{ "type": "Feature", "properties": { "Name": "Miguel Gayol Pertierra - Nacimiento", "description": "Fecha de nacimiento: 2001-05-25" }, "geometry": { "type": "Point", "coordinates": [ -5.826971044800217, 43.376023354829329 ] } },
+{ "type": "Feature", "properties": { "Name": "Miguel Gayol Pertierra - Residencia", "description": "Fecha de nacimiento: 2001-05-25" }, "geometry": { "type": "Point", "coordinates": [ -5.874070632221418, 43.367810861051794 ] } },
+{ "type": "Feature", "properties": { "Name": "Luis Sánchez de Posada Orihuela - Nacimiento", "description": "Fecha de nacimiento: 2001-08-25" }, "geometry": { "type": "Point", "coordinates": [ -5.826971044800217, 43.376023354829329 ] } },
+{ "type": "Feature", "properties": { "Name": "Luis Sánchez de Posada Orihuela - Residencia", "description": "Fecha de nacimiento: 2001-08-25" }, "geometry": { "type": "Point", "coordinates": [ -5.863946530872227, 43.351275799146492 ] } },
+{ "type": "Feature", "properties": { "Name": "Jairo Castro García - Nacimiento", "description": "Fecha de nacimiento: 2000-12-02" }, "geometry": { "type": "Point", "coordinates": [ -6.537775396528275, 43.545289310481422 ] } },
+{ "type": "Feature", "properties": { "Name": "Jairo Castro García - Residencia", "description": "Fecha de nacimiento: 2000-12-02" }, "geometry": { "type": "Point", "coordinates": [ -5.822732215381706, 43.389060232316353 ] } },
+{ "type": "Feature", "properties": { "Name": "Olaya López Muñoz - Nacimiento", "description": "Fecha de nacimiento: 1999-06-25" }, "geometry": { "type": "Point", "coordinates": [ -4.050255805933801, 43.346692790598951 ] } },
+{ "type": "Feature", "properties": { "Name": "Olaya López Muñoz - Residencia", "description": "Fecha de nacimiento: 1999-06-25" }, "geometry": { "type": "Point", "coordinates": [ -5.935794717770648, 43.55961055998111 ] } },
+{ "type": "Feature", "properties": { "Name": "Kike Arango Rodríguez - Nacimiento", "description": "Fecha de nacimiento: 1997-03-08" }, "geometry": { "type": "Point", "coordinates": [ -5.793418152345481, 43.611413457631187 ] } },
+{ "type": "Feature", "properties": { "Name": "Kike Arango Rodríguez - Residencia", "description": "Fecha de nacimiento: 1997-03-08" }, "geometry": { "type": "Point", "coordinates": [ -5.83016168210446, 43.595143728681052 ] } },
+{ "type": "Feature", "properties": { "Name": "Isabel Macho de Cos - Nacimiento", "description": "Fecha de nacimiento: 1999-05-26" }, "geometry": { "type": "Point", "coordinates": [ -4.053292221867252, 43.347849273625059 ] } },
+{ "type": "Feature", "properties": { "Name": "Isabel Macho de Cos - Residencia", "description": "Fecha de nacimiento: 1999-05-26" }, "geometry": { "type": "Point", "coordinates": [ -5.850412552325025, 43.353992964099206 ] } },
+{ "type": "Feature", "properties": { "Name": "Alex Caso Díaz - Nacimiento", "description": "Fecha de nacimiento: 2000-11-03" }, "geometry": { "type": "Point", "coordinates": [ -5.63456233512747, 43.287666968492005 ] } },
+{ "type": "Feature", "properties": { "Name": "Alex Caso Díaz - Residencia", "description": "Fecha de nacimiento: 2000-11-03" }, "geometry": { "type": "Point", "coordinates": [ -5.641638742214042, 43.287603842713906 ] } }
+]
+}
