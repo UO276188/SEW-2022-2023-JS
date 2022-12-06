@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persona  nombre="Sara María" apellidos="Ramírez Pérez" fechaNacimiento="2001-04-29">
+	<datos>
+		<lugarNacimiento>Avilés</lugarNacimiento>
+		<coordenadasNacimiento>
+			<longitud>-5.936102335619281</longitud>
+			<latitud>43.55205777798353</latitud>
+			<altitud>26</altitud>
+		</coordenadasNacimiento>
+		<lugarResidencia>Avilés</lugarResidencia>
+		<coordenadasResidencia>
+			<longitud>-5.922366444815168</longitud>
+			<latitud>43.55539516182748</latitud>
+			<altitud>22</altitud>
+		</coordenadasResidencia>
+		<foto>sara.jpeg</foto>
+		<video>sara.mp4</video>
+		<comentario>Flautista y pianista</comentario>
+	</datos>
+	
+	<persona nombre="Silvia" apellidos="Suárez Prendes" fechaNacimiento="2001-02-27">
+		<datos>
+			<lugarNacimiento>Pravia</lugarNacimiento>
+			<coordenadasNacimiento>
+				<longitud>-6.113178509202413</longitud>
+				<latitud>43.48758492992525</latitud>
+				<altitud>57</altitud>
+			</coordenadasNacimiento>
+			<lugarResidencia>La Arena</lugarResidencia>
+			<coordenadasResidencia>
+				<longitud>-6.075515880166677</longitud>
+				<latitud>43.55789427316034</latitud>
+				<altitud>8</altitud>
+			</coordenadasResidencia>
+			<foto>silvia.jpeg</foto>
+			<comentario>Le gusta cantar</comentario>
+		</datos>
+		
+		<persona nombre="Celia" apellidos="Melendi Lavandera" fechaNacimiento="2001-09-01">
+			<datos>
+				<lugarNacimiento>Oviedo</lugarNacimiento>
+				<coordenadasNacimiento>
+					<longitud>-5.826971044800217</longitud>
+					<latitud>43.37602335482933</latitud>
+					<altitud>166</altitud>
+				</coordenadasNacimiento>
+				<lugarResidencia>Pola de Siero</lugarResidencia>
+				<coordenadasResidencia>
+					<longitud>-5.663191627791036</longitud>
+					<latitud>43.391954193048434</latitud>
+					<altitud>258</altitud>
+				</coordenadasResidencia>
+				<foto>celia.jpeg</foto>
+				<comentario>Le gusta dibujar y escribir</comentario>
+			</datos>
+		</persona>
+		
+		<persona nombre="Iván" apellidos="Vega García" fechaNacimiento="2001-03-06">
+			<datos>
+				<lugarNacimiento>Avilés</lugarNacimiento>
+				<coordenadasNacimiento>
+					<longitud>-5.936102335619281</longitud>
+					<latitud>43.55205777798353</latitud>
+					<altitud>26</altitud>
+				</coordenadasNacimiento>
+				<lugarResidencia>Avilés</lugarResidencia>
+				<coordenadasResidencia>
+					<longitud>-5.926744769381713</longitud>
+					<latitud>43.56236142960182</latitud>
+					<altitud>27</altitud>
+				</coordenadasResidencia>
+				<foto>ivan.jpeg</foto>
+				<comentario>Practica capoeira</comentario>
+			</datos>
+		</persona>
+		
+		<persona nombre="Elena" apellidos="Selgas Fernández" fechaNacimiento="2001-12-02">
+			<datos>
+				<lugarNacimiento>Pravia</lugarNacimiento>
+				<coordenadasNacimiento>
+					<longitud>-6.113777037769097</longitud>
+					<latitud>43.4880297103507</latitud>
+					<altitud>57</altitud>
+				</coordenadasNacimiento>
+				<lugarResidencia>Lugo</lugarResidencia>
+				<coordenadasResidencia>
+					<longitud>-7.558507437897362</longitud>
+					<latitud>43.006172367015694</latitud>
+					<altitud>454</altitud>
+				</coordenadasResidencia>
+				<foto>elena.jpeg</foto>
+				<comentario>Estudia nutrición</comentario>
+			</datos>
+		</persona>
+	</persona>
+	
+	<persona nombre="Laura" apellidos="Gómez Menéndez" fechaNacimiento="2001-01-01">
+		<datos>
+			<lugarNacimiento>Tebongo</lugarNacimiento>
+			<coordenadasNacimiento>
+				<longitud>-6.502905988432673</longitud>
+				<latitud>43.23860446899653</latitud>
+				<altitud>523</altitud>
+			</coordenadasNacimiento>
+			<lugarResidencia>Oviedo</lugarResidencia>
+			<coordenadasResidencia>
+				<longitud>-5.858897926390938</longitud>
+				<latitud>43.36477581220521</latitud>
+				<altitud>242</altitud>
+			</coordenadasResidencia>
+			<foto>laura.jpeg</foto>
+			<comentario>Le encantan los unicornios</comentario>
+		</datos>
+		
+		<persona nombre="Miguel" apellidos="Gayol Pertierra" fechaNacimiento="2001-05-25">
+			<datos>
+				<lugarNacimiento>Oviedo</lugarNacimiento>
+				<coordenadasNacimiento>
+					<longitud>-5.826971044800217</longitud>
+					<latitud>43.37602335482933</latitud>
+					<altitud>166</altitud>
+				</coordenadasNacimiento>
+				<lugarResidencia>La Florida</lugarResidencia>
+				<coordenadasResidencia>
+					<longitud>-5.874070632221418</longitud>
+					<latitud>43.367810861051794</latitud>
+					<altitud>242</altitud>
+				</coordenadasResidencia>
+				<foto>miguel.jpeg</foto>
+				<comentario>Erasmus en Malta</comentario>
+			</datos>
+		</persona>
+		
+		<persona nombre="Luis" apellidos="Sánchez de Posada Orihuela" fechaNacimiento="2001-08-25">
+			<datos>
+				<lugarNacimiento>Oviedo</lugarNacimiento>
+				<coordenadasNacimiento>
+					<longitud>-5.826971044800217</longitud>
+					<latitud>43.37602335482933</latitud>
+					<altitud>166</altitud>
+				</coordenadasNacimiento>
+				<lugarResidencia>Montecerrao</lugarResidencia>
+				<coordenadasResidencia>
+					<longitud>-5.8639465308722265</longitud>
+					<latitud>43.35127579914649</latitud>
+					<altitud>242</altitud>
+				</coordenadasResidencia>
+				<foto>luis.jpeg</foto>
+				<comentario>Toca la guitarra</comentario>
+			</datos>
+		</persona>
+		
+		<persona nombre="Jairo" apellidos="Castro García" fechaNacimiento="2000-12-02">
+			<datos>
+				<lugarNacimiento>Luarca</lugarNacimiento>
+				<coordenadasNacimiento>
+					<longitud>-6.537775396528275</longitud>
+					<latitud>43.54528931048142</latitud>
+					<altitud>0</altitud>
+				</coordenadasNacimiento>
+				<lugarResidencia>La Corredoria</lugarResidencia>
+				<coordenadasResidencia>
+					<longitud>-5.822732215381706</longitud>
+					<latitud>43.38906023231635</latitud>
+					<altitud>166</altitud>
+				</coordenadasResidencia>
+				<foto>jairo.jpeg</foto>
+				<comentario>Becario</comentario>
+			</datos>
+		</persona>
+	</persona>
+	
+	<persona nombre="Olaya" apellidos="López Muñoz" fechaNacimiento="1999-06-25">
+		<datos>
+			<lugarNacimiento>Torrelavega</lugarNacimiento>
+			<coordenadasNacimiento>
+				<longitud>-4.050255805933801</longitud>
+				<latitud>43.34669279059895</latitud>
+				<altitud>37</altitud>
+			</coordenadasNacimiento>
+			<lugarResidencia>Avilés</lugarResidencia>
+			<coordenadasResidencia>
+				<longitud>-5.935794717770648</longitud>
+				<latitud>43.55961055998111</latitud>
+				<altitud>27</altitud>
+			</coordenadasResidencia>
+			<foto>olaya.jpeg</foto>
+			<comentario>Su hobbie es la fotografía</comentario>
+		</datos>
+		
+		<persona nombre="Kike" apellidos="Arango Rodríguez" fechaNacimiento="1997-03-08">
+			<datos>
+				<lugarNacimiento>Luanco</lugarNacimiento>
+				<coordenadasNacimiento>
+					<longitud>-5.793418152345481</longitud>
+					<latitud>43.61141345763119</latitud>
+					<altitud>56</altitud>
+				</coordenadasNacimiento>
+				<lugarResidencia>Busto</lugarResidencia>
+				<coordenadasResidencia>
+					<longitud>-5.83016168210446</longitud>
+					<latitud>43.59514372868105</latitud>
+					<altitud>56</altitud>
+				</coordenadasResidencia>
+				<foto>kike.jpeg</foto>
+				<comentario>Le apasionan las motos</comentario>
+			</datos>
+		</persona>
+		
+		<persona nombre="Isabel" apellidos="Macho de Cos" fechaNacimiento="1999-05-26">
+			<datos>
+				<lugarNacimiento>Torrelavega</lugarNacimiento>
+				<coordenadasNacimiento>
+					<longitud>-4.0532922218672525</longitud>
+					<latitud>43.34784927362506</latitud>
+					<altitud>37</altitud>
+				</coordenadasNacimiento>
+				<lugarResidencia>Oviedo</lugarResidencia>
+				<coordenadasResidencia>
+					<longitud>-5.850412552325025</longitud>
+					<latitud>43.353992964099206</latitud>
+					<altitud>242</altitud>
+				</coordenadasResidencia>
+				<foto>isabel.jpeg</foto>
+				<comentario>Pedagoga</comentario>
+			</datos>
+		</persona>
+		
+		<persona nombre="Alex" apellidos="Caso Díaz" fechaNacimiento="2000-11-03">
+			<datos>
+				<lugarNacimiento>El Entrego</lugarNacimiento>
+				<coordenadasNacimiento>
+					<longitud>-5.63456233512747</longitud>
+					<latitud>43.287666968492005</latitud>
+					<altitud>498</altitud>
+				</coordenadasNacimiento>
+				<lugarResidencia>El Entrego</lugarResidencia>
+				<coordenadasResidencia>
+					<longitud>-5.641638742214042</longitud>
+					<latitud>43.28760384271391</latitud>
+					<altitud>498</altitud>
+				</coordenadasResidencia>
+				<foto>alex.jpeg</foto>
+				<comentario>Aficionado a la F1</comentario>
+			</datos>
+		</persona>
+	</persona>
+</persona>
+
