@@ -8,13 +8,13 @@ class Auxiliar{
         $("p").hide();
     } 
     añadir(){
-        $("#after").after("<h4>Añadiendo titulos...</h4>");
+        $("h3").first().after("<h4>Añadiendo titulos...</h4>");
     }
     eliminarH2(){
         $("h2").remove();
     }
-    eliminarH3(){
-        $("#elim").remove();
+    eliminarP(){
+        $("p").last().remove();
     }
     modificarTitulo(){
         $("h1").text("Hemos modificado el titulo 1");
@@ -28,10 +28,17 @@ class Auxiliar{
         $("img").attr("alt", "Árbol");
     }
     recorrer(){
+        $("section").remove();
+        var stringDatos = "<section>";
+        stringDatos += "<h2>Elementos recorridos:</h2>";
         $("*", document.body).each(function() {
             var etiquetaPadre = $(this).parent().get(0).tagName;
-            $(this).prepend(document.createTextNode( "Etiqueta padre : <"  + etiquetaPadre + "> elemento : <" + $(this).get(0).tagName +"> valor: "));
+            var etiquetaActual = $(this).get(0).tagName;
+            var valorEtiquetaActual = $(this).get(0).textContent;
+            stringDatos += "<p>Etiqueta padre : "  + etiquetaPadre + " elemento : " +  etiquetaActual + " valor: " + valorEtiquetaActual + "<p>";
         });
+        stringDatos += "</section>";
+        $("form").before(stringDatos);
     }
     contarTabla(){
         var nFilas = $("table tr").length;
